@@ -1,15 +1,17 @@
 import React from "react";
 
-const Pagination = ({ setPageNumber }) => {
+const Pagination = ({ pageNumber, setPageNumber }) => {
   let previous = () => {
-    setPageNumber((x) => x--);
+    if (pageNumber === 1) return;
+    setPageNumber((prev) => prev - 1);
   };
   let next = () => {
-    setPageNumber((x) => x++);
+    if (pageNumber === 42) return;
+    setPageNumber((nxt) => nxt + 1);
   };
 
   return (
-    <div className="container d-flex justify-content-center gap-5 my">
+    <div className="container d-flex justify-content-center gap-5 my-5">
       <button onClick={previous} className="btn btn-info">
         Previous
       </button>
