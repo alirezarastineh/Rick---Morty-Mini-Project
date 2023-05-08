@@ -12,10 +12,10 @@ const Pagination = ({ pageNumber, setPageNumber }) => {
 
   return (
     <div className="container d-flex justify-content-center gap-5 my-5">
-      <button onClick={previous} className="btn btn-info">
+      <button onClick={previous} className="btn btn-success">
         Previous
       </button>
-      <button onClick={next} className="btn btn-info">
+      <button onClick={next} className="btn btn-success">
         Next
       </button>
     </div>
