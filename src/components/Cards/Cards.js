@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Cards.module.scss";
+import styles from "./Cards.module.css";
 import { Button, Modal } from "react-bootstrap";
 
 const Card = ({
@@ -43,9 +43,9 @@ const Card = ({
         </Modal.Header>
         <Modal.Body>
           <img src={image} alt="" className="img-fluid" />
-          <div className="fs-5 fw-bold">{status}</div>
-          <div className="fs-5">{species}</div>
-          <div className="fs-5">{gender}</div>
+          <div className="fs-5 fw-bold">Status: {status}</div>
+          <div className="fs-5">Species: {species}</div>
+          <div className="fs-5">Gender: {gender}</div>
         </Modal.Body>
       </Modal>
     </div>
