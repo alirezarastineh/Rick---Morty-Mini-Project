@@ -31,12 +31,8 @@ function App() {
       <Search setSearch={setSearch} setPageNumber={setPageNumber} />
 
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="row">
-              <Cards results={results} />
-            </div>
-          </div>
+        <div className="col-12">
+          <Cards results={results} />
         </div>
       </div>
       <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />

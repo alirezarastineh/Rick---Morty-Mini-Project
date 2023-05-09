@@ -46,6 +46,7 @@ const Card = ({
           <div className="fs-5 fw-bold">Status: {status}</div>
           <div className="fs-5">Species: {species}</div>
           <div className="fs-5">Gender: {gender}</div>
+          <div className="fs-5">Origin: {origin.name}</div>
         </Modal.Body>
       </Modal>
     </div>
@@ -55,8 +56,8 @@ const Card = ({
 const Cards = ({ results }) => {
   let display;
   if (results) {
-    display = results.map((x) => {
-      let { id, name, image, location, status, origin, species, gender } = x;
+    display = results.map((info) => {
+      let { id, name, image, location, status, origin, species, gender } = info;
       return (
         <Card
           key={id}
@@ -72,7 +73,11 @@ const Cards = ({ results }) => {
       );
     });
   } else {
-    display = "No Matches For Your Search";
+    display = (
+      <div className="fs-1 text-bg-warning p-3 opacity-75 text-center rounded-pill">
+        No Matches For Your Search !!!!!!!!!!!!!!!!!!!!!!!!!!
+      </div>
+    );
   }
 
   return <div className="row">{display}</div>;
